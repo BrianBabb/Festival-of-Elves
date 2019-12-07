@@ -1,47 +1,23 @@
-require("dotenv").config();
-var express = require("express");
-var exphbs = require("express-handlebars");
+//jshint esversion:6
+require('dotenv').config();
+const express = require("express");
+const bodyParser = require("body-parser");
+const ejs = require("ejs");
+const session = require('express-session');
+const passport = require("passport");
 
-var db = require("./models");
 
-var app = express();
-var PORT = process.env.PORT || 3000;
+const app = express();
 
-// Middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
 app.use(express.static("public"));
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
-
-// Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
-
-var syncOptions = { force: false };
-
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
-}
-
-// Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
-  });
+app.listen(3000, function() {
+  console.log("Server started on port 3000.");
 });
 
-module.exports = app;
+var routes = require('./controllers/elves_controller.js');
+app.use(routes);
