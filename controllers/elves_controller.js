@@ -36,7 +36,7 @@ router1.post("/loginAuth", function(req, res) {
       userId = result[0].id;
       //authentication successfil
       //do whatever
-      res.render("profile");
+      res.render("secrets");
     } else {
       //auth failed///do something else
       console.log("login failed");
@@ -80,6 +80,11 @@ router1.get("/login", function(req, res) {
 router1.get("/register", function(req, res) {
   console.log("this is register clicked on landing page");
   res.render("register");
+});
+
+router1.get("/calendar", function(req, res) {
+  console.log("this is calendar page");
+  res.render("calendar");
 });
 
 module.exports = router1;

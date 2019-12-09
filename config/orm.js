@@ -79,6 +79,23 @@ var orm = {
         cb(queryResult);
       }
     );
+  },
+  getChildDetails: function(tableInput, childName, cb) {
+    //dbConnection.query('DELETE FROM '+tableInput+' WHERE id= '+id+';', function(err,result){
+    console.log("getChildDetails orm childName= " + childName);
+
+    dbConnection.query(
+      "select * from user WHERE childName = '" + childName + "'",
+      function(err, queryResult) {
+        if (err) {
+          console.log("getChildDetails orm error =" + err);
+          throw err;
+        }
+        console.log("orm all successful " + queryResult[0]);
+        console.log("orm all successful " + queryResult[0].childName);
+        cb(queryResult);
+      }
+    );
   }
 };
 
