@@ -15,4 +15,10 @@ CREATE TABLE childdetail(
     parentId NOT NULL
     childName varchar(255) NOT NULL,
 	PRIMARY KEY (childId,parentId)
+),
+CREATE TABLE elves(
+    elvesId int NOT NULL AUTO_INCREMENT ,
+    childId int NOT NULL,
+    elvesName varchar(50) NOT NULL,
+	PRIMARY KEY (elvesId,childId)
 );

@@ -12,7 +12,7 @@ router1.post("/register", function(req, res) {
   console.log(emailId);
 
   orm.create("user", emailId, userPwd, function(result) {
-    res.redirect("/");
+    res.redirect("/profile");
   });
 
   // register user process via sequalize
@@ -60,7 +60,7 @@ router1.post("/familyProfile", function(req, res) {
     orm.createChildProfile(userId, child2, function(result) {
       //res.redirect("secrets");
     });
-    res.render("profile");
+    res.render("login");
   });
 
   // register user process via sequalize
@@ -80,6 +80,10 @@ router1.get("/login", function(req, res) {
 router1.get("/register", function(req, res) {
   console.log("this is register clicked on landing page");
   res.render("register");
+});
+router1.get("/profile", function(req, res) {
+  console.log("this is register clicked on landing page");
+  res.render("profile");
 });
 
 router1.get("/calendar", function(req, res) {
