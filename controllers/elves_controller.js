@@ -60,7 +60,7 @@ router1.post("/familyProfile", function(req, res) {
     orm.createChildProfile(userId, child2, function(result) {
       //res.redirect("secrets");
     });
-    res.render("secrets");
+    res.render("profile");
   });
 
   // register user process via sequalize
