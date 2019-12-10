@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../public/css/style2.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+
+    
+
+
+</head>
+
+<body>
+        <canvas id="canvas"></canvas>
+        
+    <div class="card mb-3">
+       
+        <div class="card-body">
+          <h5 class="card-title">Festival of the Elves</h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted"></small></p>
+        </div>
+      </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                        <p>Festival of the Elves is a magicaly time. Its about having fun with your family and for being kind.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sergo" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Happy Birthday Sergo!!!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                </button>
+            </div>
+            <div class="modal-body">
+                    <img src="../public/css/image/sergosanta.JPG" alt="sergosanta" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="tags">
+                <!-- tag 1 -->
+                <div class="tag-container">
+
+                    <div id="tag1" class="tag" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                December<br>&#10054;1&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;1&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- tag 2 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;2&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;2&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 3 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;3&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;3&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 4 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;4&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;4&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 5 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;5&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;5&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 6 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;6&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;6&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 7 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;7&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;7&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="tags">
+
+
+                <!-- tag 8 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;8&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;8&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 9 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;9&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;9&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 10 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;10&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;10&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 11 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;11&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;11&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 12 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;12&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;12&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 13 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;13&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;13&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 14 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;14&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#sergo">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;14&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="tags">
+                <!-- tag 15 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;15&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;15&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 16 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;16&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;16&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 17 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;17&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;17&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 18 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;18&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;18&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 19 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;19&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;19&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 20 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;20&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;20&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 21 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;21&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;21&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="tags">
+                <!-- tag 22 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;22&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;22&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- tag 23 -->
+                </div>
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;23&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;23&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 24 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;24&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;24&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- tag 25 -->
+                <div class="tag-container">
+                    <div class="tag">
+
+                        <div class="tag-side tag-3-side">
+                            <div class="tag-text tag-3-text">
+                                    December<br>&#10054;25&#10054;
+                                <div class="rule-shape"></div>
+                            </div>
+                        </div>
+
+                        <div class="tag-side tag-3-side is-back">
+                            <div class="tag-text tag-3-text">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    Click Me
+                                </button>
+                                <div class="rule-shape">&#10054;25&#10054;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../public/js/script2.js"></script>
+    <!-- <script src="script2.js"></script> -->
+</body>
+
+</html>
