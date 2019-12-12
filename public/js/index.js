@@ -1,11 +1,14 @@
 // Get references to page elements
+// console.log("for elves data");
+// $("input:checkbox").on("change", function(evt) {
+//   if ($(this).siblings(":checked").length >= 2) {
+//     this.checked = false;
+//     console.log(this.value);
+//     console.log(this.value);
+//     console.log(this.value);
+//   }
+// });
 
-$("input:checkbox").on("change", function(evt) {
-  if ($(this).siblings(":checked").length >= 2) {
-    this.checked = false;
-    console.log(this.value);
-  }
-});
 // var $exampleText = $("#example-text");
 // var $exampleDescription = $("#example-description");
 // var $submitBtn = $("#submit");
