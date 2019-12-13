@@ -35,7 +35,7 @@ var app = {
   }
 };
 
-app.init();
+app.init(); 
 
 
 // Get references to page elements
