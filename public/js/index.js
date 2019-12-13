@@ -35,8 +35,10 @@ var app = {
   }
 };
 
-app.init(); 
+app.init();
 
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars[0];
 
 // Get references to page elements
 // console.log("for elves data");

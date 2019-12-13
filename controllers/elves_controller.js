@@ -25,7 +25,7 @@ router1.post("/loginAuth", function(req, res) {
   var userPwd = req.body.password;
   // console.log("emailId= " + emailId);
   //console.log("userPwd= " + userPwd);
-  res.render("calendar");
+  // res.render("calendar");
   //get user data
   orm.getUserId(emailId, function(result) {
     //db.User.getUserDetails(emailId, function(result) {
@@ -37,7 +37,8 @@ router1.post("/loginAuth", function(req, res) {
       //do whatever
       //orm.getChildAndElfNames(userId)
       //this res.render will go in callback from getchildandelfnames and the data object will be the same as the one above in register
-      res.render("secrets");
+      res.redirect('/elvCal');
+      // res.render("secrets");
     } else {
       //auth failed///do something else
       console.log("login failed");
