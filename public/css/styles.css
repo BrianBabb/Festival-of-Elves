@@ -1,11 +1,19 @@
 body {
-  background-image:url(../css/image/christmas-plan.jpeg);
+  background-image:url(../css/image/christmas-plan.jpeg) ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   
 }
+ 
 
 .centered {
     padding-top: 200px;
     text-align: center;
+}
+.jumbotron{
+  background-color: transparent;
 }
 
 .secret-text {
