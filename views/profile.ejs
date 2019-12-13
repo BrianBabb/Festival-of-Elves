@@ -1,41 +1,39 @@
 <%- include('partials/header') %>
 
 <div class="container mt-5">
-    <h1>Profile</h1>
 
     <div class="row">
         <div class="col-sm-8">
             <div class="card">
                 <div class="card-body">
-
+                    <h3>Create Profile</h3>
                     <!-- Makes POST request to /login route -->
                     <form action="/familyProfile" method="post">
                         <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" class="form-control" name="firstName">
+                            <!-- <label for="firstName">First Name</label> -->
+                            <input type="text" class="form-control" placeholder="Parent First Name" name="firstName">
                         </div>
                         <div class="form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" class="form-control" name="lastName">
+                            <!-- <label for="lastName">Last Name</label> -->
+                            <input type="text" class="form-control" placeholder="Parent Last Name" name="lastName">
                         </div>
                         <div class="form-group">
-                            <label for="child1">First Child Full Name</label>
-                            <input type="text" class="form-control" name="child1">
+                            <!-- <label for="child1">First Child Full Name</label> -->
+                            <input type="text" class="form-control" placeholder="First Child Name" name="child1">
                         </div>
                         <div class="form-group">
-                            <label for="Child2">Second Child Full Name</label>
-                            <input type="text" class="form-control" name="child2">
+                            <!-- <label for="Child2">Second Child Full Name</label> -->
+                            <input type="text" class="form-control" placeholder="Second Child Name" name="child2">
                         </div>
-                        <!-- <h3>Please choose two elves from the list or enter your own elves </h3> -->
+                        <h4>Please choose two elves from the list or enter your own elves </h4>
                         <div class="form-group">
-                            <label for="Elf1">Select Elf from the list</label>
-                            <input type="text" class="form-control" name="elf1">
+                            <!-- <label for="Elf1">Select Elf from the list</label> -->
+                            <input type="text" class="form-control" placeholder="First Elf" name="elf1">
                         </div>
                         <div class="form-group">
-                            <label for="Elf2">Select second Elf from the list</label>
-                            <input type="text" class="form-control" name="elf2">
+                            <!-- <label for="Elf2">Select second Elf from the list</label> -->
+                            <input type="text" class="form-control" placeholder="Second Elf" name="elf2">
                         </div>
-                        
                         <ul>
                             <li>Joy</li>
                             <li>Hope</li>
@@ -43,25 +41,12 @@
                             <li>Esparanza</li>
                             <li>Frosty</li>
                             <li>Eve</li>
-
                         </ul>
-                        <!-- <input class="single-checkbox" type="checkbox" name="elf" value="elf1">Joy <br>
-                        <input class="single-checkbox" type="checkbox" name="elf" value="elf2">Hope <br>
-                        <input class="single-checkbox" type="checkbox" name="elf" value="elf3">Noelle<br>
-                        <input class="single-checkbox" type="checkbox" name="elf" value="elf4">Esparanza<br>
-                        <input class="single-checkbox" type="checkbox" name="elf" value="elf5">Frosty<br>
-                        <input class="single-checkbox" type="checkbox" name="elf" value="elf5">Eve<br><br> -->
-
-                        <!--  -->
-
-
                         <button type="submit" class="btn btn-dark">Create Profile</button>
                     </form>
-
                 </div>
             </div>
         </div>
-
         <div class="col-sm-4">
             <div class="card">
                 <div class="card-body">
@@ -72,8 +57,17 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 <script src="/js/index.js"></script>
 <%- include('partials/footer') %>
+
+
+<!-- <input class="single-checkbox" type="checkbox" name="elf" value="elf1">Joy <br>
+                        <input class="single-checkbox" type="checkbox" name="elf" value="elf2">Hope <br>
+                        <input class="single-checkbox" type="checkbox" name="elf" value="elf3">Noelle<br>
+                        <input class="single-checkbox" type="checkbox" name="elf" value="elf4">Esparanza<br>
+                        <input class="single-checkbox" type="checkbox" name="elf" value="elf5">Frosty<br>
+                        <input class="single-checkbox" type="checkbox" name="elf" value="elf5">Eve<br><br> -->
+
+<!--  -->
