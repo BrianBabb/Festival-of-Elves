@@ -37,7 +37,17 @@ router1.post("/loginAuth", function(req, res) {
       //do whatever
       //orm.getChildAndElfNames(userId)
       //this res.render will go in callback from getchildandelfnames and the data object will be the same as the one above in register
-      res.redirect('/elvCal');
+      orm.getChildDetails(userId, function(result) {
+        child1 = result[0].childName;
+        child2 = result[1].childName;
+        elf1 = result[0].elvesName;
+        elf2 = result[1].elvesName;
+        console.log(
+          "getChildDetails called in controller" + result[0].childName
+        );
+        res.redirect("/elvCal");
+      });
+
       // res.render("secrets");
     } else {
       //auth failed///do something else
@@ -74,7 +84,7 @@ router1.post("/familyProfile", function(req, res) {
           orm.createElves(result[1].childId, elf2, function(result) {
             //    console.log("elf two name" + elf2);
 
-            res.redirect('/elvCal');
+            res.redirect("/elvCal");
           });
         });
       });
@@ -122,9 +132,9 @@ router1.get("/calendar", function(req, res) {
     secondelf: elf2
   });
 });
+router1.get("/logout", function(req, res) {
+  res.render("home");
+});
+
 
 module.exports = router1;
-// res.render("calendar", { firstchild: child1 });
-// res.render("calendar", { secondchild: child2 });
-// res.render("calendar", { firstelf: elf1 });
-// res.render("calendar", { secondelf: elf2 });

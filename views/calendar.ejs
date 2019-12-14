@@ -5,18 +5,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
-
-
-
 <body>
   <div class="container">
     <div class="calendar">
+      <!--front div start here-->
       <div class="front">
         <div class="current-date">
           <!-- <h1>Friday 15th</h1> -->
           <h1>December 2019</h1>
         </div>
-
+        <!--current month div start-->
         <div class="current-month">
           <ul class="week-days">
             <li>SUN</li>
@@ -26,90 +24,69 @@
             <li>THU</li>
             <li>FRI</li>
             <li>SAT</li>
-
           </ul>
 
           <div class="weeks">
+            <!--weeks here-->
             <div class="first">
-              <!-- <span class="last-month">28</span>
-              <span class="last-month">29</span>
-              <span class="last-month">30</span>
-              <span class="last-month">31</span> -->
-              <span>01</span>
-              <span>02</span>
-              <span>03</span>
-              <span>04</span>
-              <span>05</span>
-              <span>06</span>
-              <span>07</span>
-            </div>
-
-            <div class="second">
-
-              <span>08</span>
-              <span>09</span>
-              <span>10</span>
-              <span>11</span>
-              <span>12</span>
-              <span>13</span>
-              <span>14</span>
-            </div>
-
-            <div class="third">
-
-              <span>15</span>
-              <span>16</span>
-              <span>17</span>
-              <span>18</span>
-              <span>19</span>
-              <span>20</span>
-              <span>21</span>
-            </div>
-
-            <div class="fourth">
-
-              <span>22</span>
-              <span>23</span>
-              <span>24</span>
-              <span>25</span>
-              <span>26</span>
-              <span>27</span>
-              <span>28</span>
-            </div>
-
-            <div class="fifth">
-
-              <span>29</span>
-              <span>30</span>
-              <span>31</span>
-              <span class="last-month">1</span>
-              <span class="last-month">2</span>
-              <span class="last-month">3</span>
-              <span class="last-month">4</span>
-
-            </div>
-            
+                <span>01</span>
+                <span>02</span>
+                <span>03</span>
+                <span>04</span>
+                <span>05</span>
+                <span>06</span>
+                <span>07</span>
+              </div>
+              <div class="second">
+                <span>08</span>
+                <span>09</span>
+                <span>10</span>
+                <span>11</span>
+                <span>12</span>
+                <span>13</span>
+                <span>14</span>
+              </div>
+  
+              <div class="third">
+                <span>15</span>
+                <span>16</span>
+                <span>17</span>
+                <span>18</span>
+                <span>19</span>
+                <span>20</span>
+                <span>21</span>
+              </div>
+  
+              <div class="fourth">
+                <span>22</span>
+                <span>23</span>
+                <span>24</span>
+                <span>25</span>
+                <span>26</span>
+                <span>27</span>
+                <span>28</span>
+              </div>
+  
+              <div class="fifth">
+                <span>29</span>
+                <span>30</span>
+                <span>31</span>
+                <span class="last-month">1</span>
+                <span class="last-month">2</span>
+                <span class="last-month">3</span>
+                <span class="last-month">4</span>
+              </div>
           </div>
-        </div>
-      </div>
+        </div> <!--current month closed-->
+      </div> <!--front div closed-->
 
       <div class="back">
         <div class="info">
-          <!-- <div class="date">
-            <p class="info-date">
-              Date: <span>Jan 15th, 2016</span>
-            </p>
-            <p class="info-time">
-              Time: <span>6:35 PM</span>
-            </p>
-          </div> -->
           <div class="address">
-
             <p>Loving <%= firstchild %>
               and <%= secondchild %>,</p>
             <p>When Santa told us we would be your elves for the festival of the elves we were Sooooooooo
               EXCITED. Our names are
-
               <p> <%= firstelf %>
                 and <%= secondelf %></p>
               We will
@@ -121,7 +98,6 @@
           </div>
           <div class="observations">
             <p>
-
             </p>
           </div>
         </div>
@@ -134,16 +110,17 @@
             Dismiss <i class="ion-android-close"></i>
           </button>
         </div>
-      </div>
+      </div> <!--div back-->
+    </div> <!--calendar div closed here-->
 
+    <div class="actions">
+        <div class="container">
+          <a class="btn btn-danger btn-lg" href="/logout" role="button">Log Out</a>
+    
+        </div>
     </div>
-    <!--<div class ="row">
-      <div class ="col">
-        <a class="btn btn-dark btn-lg" href="/logout" role="button">Log Out</a>
-      </div>
-    </div>  -->
-
-  </div>
+  </div> <!--container div-->
+ 
 
   <!-- <a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a> -->
   <script src="/js/index.js"></script>

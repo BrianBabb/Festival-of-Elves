@@ -25,7 +25,7 @@ var orm = {
 
   getUserId: function (userEmail, cb) {
     //dbConnection.query('DELETE FROM '+tableInput+' WHERE id= '+id+';', function(err,result){
-    console.log("getuserDetails orm userEmail= " + userEmail);
+    // console.log("getuserDetails orm userEmail= " + userEmail);
     var child = "select * from user WHERE email = '" + userEmail + "'";
     dbConnection.query(
       child,
@@ -43,9 +43,9 @@ var orm = {
   },
 
   createParentProfile: function (id, firstName, lastName, cb) {
-    console.log("createProfile -id= " + id);
-    console.log("createProfile -firstName= " + firstName);
-    console.log("createProfile -lastName= " + lastName);
+  //  console.log("createProfile -id= " + id);
+  //  console.log("createProfile -firstName= " + firstName);
+  //  console.log("createProfile -lastName= " + lastName);
     dbConnection.query(
       "INSERT INTO parentdetail SET ?",
       {
@@ -68,7 +68,7 @@ var orm = {
     );
   },
   createChildProfile: function(id, child1, cb) {
-    console.log("createProfile -id= " +id );
+    // console.log("createProfile -id= " +id );
     dbConnection.query(
       "INSERT INTO childdetail SET ?",
       {
@@ -120,25 +120,22 @@ var orm = {
       }
     );
   },
-  getChildName: function (id, cb) {
-    // console.log("getc chikld name" + Id);
-    dbConnection.query(
-
-      // SELECT childName from childdetail where parentId =  + id + "'",
-
-      // "SELECT child.childName, elf.elvesName from  childdetail child, elves elf where child.parentId='" + id + "'",
-
-      "SELECT child.childName, elf.elvesName from  childdetail child, elves elf where child.parentId = '" + id + "'",
-      
-
-      function (err, queryResult) {
-        if (err) {
-          console.log("orm error =" + err);
-          throw err;
-        }
-        console.log("orm getChildName successful " + queryResult);
-        cb(queryResult);
+  getChildDetails: function (id, cb) {
+    console.log("orm getChildDetails" + id);
+    /*
+    "SELECT child.childName, elf.elvesName from  childdetail child, elves elf where child.parentId = '" + id + "'"
+    */
+    var query = 
+    "SELECT child.childName, elf.elvesName from  childdetail child, elves elf where child.parentId ='" + id +
+    "'" + "and child.childId = elf.childId";
+    dbConnection.query(query, function (err, queryResult) {
+      if (err) {
+        console.log("orm error =" + err);
+        throw err;
       }
+      console.log("orm getChildDetails successful " + queryResult);
+      cb(queryResult);
+    }
     );
 
   }
