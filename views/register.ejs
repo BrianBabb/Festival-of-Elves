@@ -8,7 +8,7 @@
         <div class="card-body">
 
           <!-- Makes POST request to /register route -->
-          <form action="/register" method="POST">
+          <form action="/registerUser" method="POST">
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" class="form-control" name="userEmail">
@@ -17,7 +17,31 @@
               <label for="password">Password</label>
               <input type="password" class="form-control" name="password">
             </div>
-            <div class="form-group">
+            <button type="submit" class="btn btn-dark">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign Up with Google
+          </a>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+
+<%- include('partials/header') %>
+
+
+<!--<div class="form-group">
                 <label for="firstName">First Name</label>
                 <input type="text" class="form-control" name="firstName">
             </div>
@@ -33,8 +57,8 @@
                 <label for="Child2">Second Child Full Name</label>
                 <input type="text" class="form-control" name="child2">
             </div>
-            <!-- <h3>Please choose two elves from the list or enter your own elves </h3> -->
-            <div class="form-group">
+             <h3>Please choose two elves from the list or enter your own elves </h3> -->
+<!-- <div class="form-group">
                 <label for="Elf1">Select Elf from the list</label>
                 <input type="text" class="form-control" name="elf1">
             </div>
@@ -49,30 +73,6 @@
                 <li>Noelle</li>
                 <li>Esparanza</li>
                 <li>Frosty</li>
-                <li>Eve</li>
+                <li>Eve</li> -->
 
-            </ul>
-            <button type="submit" class="btn btn-dark">Register</button>
-          </form>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="card-body">
-          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
-            <i class="fab fa-google"></i>
-            Sign Up with Google
-          </a>
-        </div>
-    
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-<%- include('partials/header') %>
+<!-- </ul> -->

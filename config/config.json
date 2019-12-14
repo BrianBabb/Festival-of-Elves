@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "TiNuviEl3",
-    "database": "user1_db",
+    "database": "newuser_db",
     "host": "localhost",
     "dialect": "mysql"
   },
