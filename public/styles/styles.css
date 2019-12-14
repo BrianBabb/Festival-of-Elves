@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    /* font-family: cursive; */
     list-style: none;
     margin: 0;
     outline: none;
@@ -172,7 +173,7 @@
   
   .actions {
       bottom: 0;
-      border-top: 1px solid rgba(73, 114, 133, .6);
+      /* border-top: 1px solid rgba(73, 114, 133, .6); */
       display: flex;
       justify-content: space-between;
       position: absolute;
@@ -190,6 +191,17 @@
       text-transform: uppercase;
       width: 50%;
   }
+  .actions a{
+    background: #b10a04fd;
+    height: 50px;
+    width: 200px;
+    font-size: 30px;
+    padding-left: 30px;
+    color: azure;
+
+
+  }
+  .action
   
   .actions button:first-of-type {
       border-right: 1px solid rgba(73, 114, 133, .6);
