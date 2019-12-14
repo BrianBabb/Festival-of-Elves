@@ -17,7 +17,6 @@ var orm = {
           console.log("orm error =" + err);
           throw err;
         }
-        console.log(queryResult);
         cb(queryResult);
       }
     );
@@ -34,28 +33,19 @@ var orm = {
           console.log("getUserDetails orm error =" + err);
           throw err;
         }
-        console.log("getUserId orm all successful " + queryResult);
-        //console.log("getUserId orm all successful " + queryResult[0]);
-        //console.log("orm all successful " + queryResult[0].email);
+        console.log("getUserId orm call successful " + queryResult);
         cb(queryResult);
       }
     );
   },
 
   createParentProfile: function (id, firstName, lastName, cb) {
-  //  console.log("createProfile -id= " + id);
-  //  console.log("createProfile -firstName= " + firstName);
-  //  console.log("createProfile -lastName= " + lastName);
     dbConnection.query(
       "INSERT INTO parentdetail SET ?",
       {
         parentId: id,
         firstName: firstName,
         lastName: lastName,
-        // childOneName: childOne,
-        // childTwoName: childTwo,
-        // elfOneName: elfOne,
-        // elfTwoName: elfTwo
       },
       function (err, queryResult) {
         if (err) {
@@ -68,7 +58,6 @@ var orm = {
     );
   },
   createChildProfile: function(id, child1, cb) {
-    // console.log("createProfile -id= " +id );
     dbConnection.query(
       "INSERT INTO childdetail SET ?",
       {
@@ -81,7 +70,7 @@ var orm = {
           console.log("orm error =" + err);
           throw err;
         }
-        console.log("orm create successful " + queryResult);
+
         cb(queryResult);
       }
     );
@@ -99,7 +88,7 @@ var orm = {
           console.log("orm createElve error =" + err);
           throw err;
         }
-        console.log("orm createElve successful " + queryResult);
+        
         cb(queryResult);
       }
     );
@@ -113,18 +102,11 @@ var orm = {
           console.log("getUserDetails orm error =" + err);
           throw err;
         }
-        console.log("getUserChildren orm all successful " + queryResult);
-        //console.log("getUserId orm all successful " + queryResult[0]);
-        //console.log("orm all successful " + queryResult[0].email);
         cb(queryResult);
       }
     );
   },
   getChildDetails: function (id, cb) {
-    console.log("orm getChildDetails" + id);
-    /*
-    "SELECT child.childName, elf.elvesName from  childdetail child, elves elf where child.parentId = '" + id + "'"
-    */
     var query = 
     "SELECT child.childName, elf.elvesName from  childdetail child, elves elf where child.parentId ='" + id +
     "'" + "and child.childId = elf.childId";
@@ -133,15 +115,11 @@ var orm = {
         console.log("orm error =" + err);
         throw err;
       }
-      console.log("orm getChildDetails successful " + queryResult);
       cb(queryResult);
     }
     );
 
   }
-
-
-
 };
 
 // Export the orm object for the model (burger.js).
