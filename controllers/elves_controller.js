@@ -116,4 +116,13 @@ router1.get("/logout", function(req, res) {
   res.render("home");
 });
 
+router1.get("/kids", function(req, res) {
+  res.render("kids", {
+    firstchild: child1,
+    secondchild: child2,
+    firstelf: elf1,
+    secondelf: elf2
+  });
+});
+
 module.exports = router1;
