@@ -9,14 +9,30 @@ var child1 = "";
 var child2 = "";
 var elf1 = "";
 var elf2 = "";
+
 router1.post("/registerUser", function(req, res) {
-  // console.log("inside post");
   emailId = req.body.userEmail;
   var userPwd = req.body.password;
-  //console.log(emailId);
-  orm.registerUser("user", emailId, userPwd, function() {
-    res.render("profile");
+  //TODO- HANDLE ERROR CONDITION via try/catch ?
+  //try {
+  orm.registerUser("user", emailId, userPwd, function(result) {
+    if (result.code === "ER_DUP_ENTRY") {
+      res.render("register", { dupError: true });
+    } else {
+      res.render("profile");
+    }
+    /* console.log("i m here message" + data.fieldCount);
+      var message =  JSON.stringify(data.fieldCount);
+      if(data.changedRows > 0 ) {
+        res.render("profile");
+      } else {
+        console.log('unable to register');
+      }
+       */
   });
+  //} catch (err) {
+  //  console.log('inside registeruser elvers controller');
+  //}
 });
 
 router1.post("/loginAuth", function(req, res) {
@@ -24,6 +40,8 @@ router1.post("/loginAuth", function(req, res) {
   var userPwd = req.body.password;
   //get user data
   orm.getUserId(emailId, function(result) {
+   // console.log(JSON.stringify(result));
+   // check if user exists
     if (
       result.length > 0 &&
       result[0].email === emailId &&
@@ -40,6 +58,7 @@ router1.post("/loginAuth", function(req, res) {
 
       // res.render("secrets");
     } else {
+      // user does not exist in db
       //auth failed///do something else
       res.render("login", {
         loginFailed: true
@@ -92,12 +111,14 @@ router1.get("/", function(req, res) {
 });
 
 router1.get("/login", function(req, res) {
-  res.render("login");
+  res.render("login", {
+    loginFailed: false
+  });
 });
 
 router1.get("/register", function(req, res) {
   console.log("this is register clicked on landing page");
-  res.render("register");
+  res.render("register", { dupError: false });
 });
 
 /**

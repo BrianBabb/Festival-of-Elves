@@ -11,6 +11,9 @@
           <!-- Makes POST request to /login route -->
           <form action="/loginAuth" method="post">
              <div class="form-group">
+              <% if ( loginFailed) { %>
+                <h4>Login failed, invalid credentials</h4>
+                <%}%>
               <label for="email">Email</label>
               <input type="email" class="form-control" name="loginEmail" required>
             </div>

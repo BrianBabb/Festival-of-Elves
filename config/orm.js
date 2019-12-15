@@ -7,17 +7,22 @@ var orm = {
 
   registerUser: function (tableInput, userEmail, password, cb) {
     dbConnection.query(
-      "INSERT INTO " + tableInput + " SET ?",
+      "INSERT  INTO " + tableInput + " SET ?",
       {
         email: userEmail,
         password: password
       },
       function (err, queryResult) {
         if (err) {
-          console.log("orm error =" + err);
-          throw err;
+         console.log("orm registerUser =" + err);
+          // throw err;
+          cb(err);
+          
+        } else {
+          console.log("orm registerUser =" + queryResult);
+          cb(queryResult);
         }
-        cb(queryResult);
+        
       }
     );
   },
@@ -25,15 +30,16 @@ var orm = {
   getUserId: function (userEmail, cb) {
     //dbConnection.query('DELETE FROM '+tableInput+' WHERE id= '+id+';', function(err,result){
     // console.log("getuserDetails orm userEmail= " + userEmail);
-    var child = "select * from user WHERE email = '" + userEmail + "'";
+    var user = "select * from user WHERE email = '" + userEmail + "'";
     dbConnection.query(
-      child,
+      user,
       function (err, queryResult) {
         if (err) {
-          console.log("getUserDetails orm error =" + err);
-          throw err;
+          console.log("getUserId orm error =" + err);
+          //throw err;
+          cb(err);
         }
-      //  console.log("getUserId orm call successful " + queryResult);
+        console.log("getUserId orm success  " + queryResult);
         cb(queryResult);
       }
     );
@@ -45,12 +51,13 @@ var orm = {
       {
         parentId: id,
         firstName: firstName,
-        lastName: lastName,
+        lastName: lastName
       },
       function (err, queryResult) {
         if (err) {
           console.log("createParentProfile orm error =" + err);
-          throw err;
+          //throw err;
+          cb(err);
         }
         console.log("orm createParentProfile successful " + queryResult);
         cb(queryResult);
@@ -63,14 +70,14 @@ var orm = {
       {
         parentId: id,
         childName: child1
-    
       },
       function(err, queryResult) {
         if (err) {
-          console.log("orm error =" + err);
-          throw err;
+          //throw err;
+          console.log("orm createChildProfile ERROR " + err);
+          cb(err);
         }
-
+        console.log("orm createChildProfile success " + queryResult);
         cb(queryResult);
       }
     );
@@ -86,9 +93,10 @@ var orm = {
       function(err, queryResult) {
         if (err) {
           console.log("orm createElve error =" + err);
-          throw err;
+          //throw err;
+          cb(err);
         }
-        
+        console.log("orm createElve error =" + queryResult);
         cb(queryResult);
       }
     );
@@ -99,9 +107,11 @@ var orm = {
       child,
       function (err, queryResult) {
         if (err) {
-          console.log("getUserDetails orm error =" + err);
-          throw err;
+          console.log("getUserChildren orm error =" + err);
+          //throw err;
+          cb(err);
         }
+        console.log("getUserChildren orm error =" + queryResult);
         cb(queryResult);
       }
     );
@@ -112,9 +122,11 @@ var orm = {
     "'" + "and child.childId = elf.childId";
     dbConnection.query(query, function (err, queryResult) {
       if (err) {
-        console.log("orm error =" + err);
-        throw err;
+        console.log("orm getChildDetails =" + err);
+        //throw err;
+        cb(err);
       }
+      console.log("orm getChildDetails =" + queryResult);
       cb(queryResult);
     }
     );

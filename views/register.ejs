@@ -9,6 +9,10 @@
 
           <!-- Makes POST request to /register route -->
           <form action="/registerUser" method="POST">
+            
+            <% if ( dupError) { %>
+              <h4>Email already exists</h4>
+              <%}%>
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" class="form-control" name="userEmail" required>
