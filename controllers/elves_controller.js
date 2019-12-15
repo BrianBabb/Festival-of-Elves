@@ -9,7 +9,7 @@ var child1 = "";
 var child2 = "";
 var elf1 = "";
 var elf2 = "";
-
+var isParent = false;
 router1.post("/registerUser", function(req, res) {
   emailId = req.body.userEmail;
   var userPwd = req.body.password;
@@ -38,10 +38,12 @@ router1.post("/registerUser", function(req, res) {
 router1.post("/loginAuth", function(req, res) {
   var emailId = req.body.loginEmail;
   var userPwd = req.body.password;
+  var parent = req.body.parentCheck;
+  console.log("parent " + parent);
   //get user data
   orm.getUserId(emailId, function(result) {
-   // console.log(JSON.stringify(result));
-   // check if user exists
+    // console.log(JSON.stringify(result));
+    // check if user exists
     if (
       result.length > 0 &&
       result[0].email === emailId &&
@@ -53,11 +55,9 @@ router1.post("/loginAuth", function(req, res) {
         child2 = result[1].childName;
         elf1 = result[0].elvesName;
         elf2 = result[1].elvesName;
-       // res.redirect("/elvCal");
-       res.render("secrets");
+        // res.redirect("/elvCal");
+        res.render("secrets", { isParent: parent });
       });
-
-      // res.render("secrets");
     } else {
       // user does not exist in db
       //auth failed///do something else
@@ -88,7 +88,7 @@ router1.post("/familyProfile", function(req, res) {
           orm.createElves(result[0].childId, elf1, function(result) {});
           orm.createElves(result[1].childId, elf2, function(result) {
             res.redirect("/elvCal");
-           // res.re("/elvCal");
+            // res.re("/elvCal");
           });
         });
       });
