@@ -87,7 +87,8 @@ router1.post("/familyProfile", function(req, res) {
         orm.getUserChildren(userId, function(result) {
           orm.createElves(result[0].childId, elf1, function(result) {});
           orm.createElves(result[1].childId, elf2, function(result) {
-            res.redirect("/elvCal");
+            res.render("login", { loginFailed: false });
+            //res.redirect("/elvCal");
             // res.re("/elvCal");
           });
         });
