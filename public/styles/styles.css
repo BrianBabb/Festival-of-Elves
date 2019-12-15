@@ -113,6 +113,9 @@
   .event {
       position: relative;
   }
+  #hide{
+      visibility: hidden;
+  }
   
   /* .event:after {
       content: '•';
