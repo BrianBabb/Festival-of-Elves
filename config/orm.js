@@ -33,7 +33,7 @@ var orm = {
           console.log("getUserDetails orm error =" + err);
           throw err;
         }
-        console.log("getUserId orm call successful " + queryResult);
+      //  console.log("getUserId orm call successful " + queryResult);
         cb(queryResult);
       }
     );
@@ -49,7 +49,7 @@ var orm = {
       },
       function (err, queryResult) {
         if (err) {
-          console.log("orm error =" + err);
+          console.log("createParentProfile orm error =" + err);
           throw err;
         }
         console.log("orm createParentProfile successful " + queryResult);
