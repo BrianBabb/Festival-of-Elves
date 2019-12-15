@@ -1,3 +1,4 @@
+create database newuser_db;
 use newuser_db;
 create table user(
     id int(10) auto_increment not null,
