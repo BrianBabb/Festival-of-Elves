@@ -53,7 +53,8 @@ router1.post("/loginAuth", function(req, res) {
         child2 = result[1].childName;
         elf1 = result[0].elvesName;
         elf2 = result[1].elvesName;
-        res.redirect("/elvCal");
+       // res.redirect("/elvCal");
+       res.render("secrets");
       });
 
       // res.render("secrets");
@@ -87,6 +88,7 @@ router1.post("/familyProfile", function(req, res) {
           orm.createElves(result[0].childId, elf1, function(result) {});
           orm.createElves(result[1].childId, elf2, function(result) {
             res.redirect("/elvCal");
+           // res.re("/elvCal");
           });
         });
       });
