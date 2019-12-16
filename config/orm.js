@@ -119,10 +119,10 @@ var orm = {
     );
   },*/
 
-  createElves: function(elevesArray, cb) {
+  createElves: function(elvesArray, cb) {
     dbConnection.query(
       "INSERT INTO elves (childId, elvesName) VALUES ?",
-      [elevesArray] ,
+      [elvesArray] ,
       function(err, queryResult) {
         if (err) {
           console.log("orm createElve error =" + err);
