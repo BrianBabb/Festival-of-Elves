@@ -17,7 +17,7 @@ var weeklyMessages = [
   { day: 15, message: "Today is thursday" },
   { day: 16, message: "9 Days before Christmas!!!!!!We can feel your Christmas cheer all the way up at the North Pole. It warmed our hearts - keep it up!Let’s have some fun. It’s time for a Christmas Hunt!!! We hid an ornament in your home, happy hunting.Love," },
   { day: 17, message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam," },
-  { day: 18, message: "Today is thursday" },
+  { day: 18, message: "7 Days before Christmas!!!!!!We can feel your Christmas cheer all the way up at the North Pole. It warmed our hearts - keep it up!Let’s have some fun. It’s time for a Christmas Hunt!!! We hid an ornament in your home, happy hunting.Love," },
   { day: 19, message: "Today is thursday" },
   { day: 20, message: "Today is thursday" },
   { day: 21, message: "Today is thursday" },

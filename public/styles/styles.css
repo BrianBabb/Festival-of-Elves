@@ -99,6 +99,10 @@
   .weeks span {
       padding: 10px;
   }
+  .weeks span:hover {
+    padding: 10px;
+    cursor: pointer;
+}
   
   .weeks span.active {
       background: #f78536;
