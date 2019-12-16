@@ -64,7 +64,7 @@ var orm = {
       }
     );
   },
-  createChildProfile: function(id, child1, cb) {
+  /*createChildProfile: function(id, child1, cb) {
     dbConnection.query(
       "INSERT INTO childdetail SET ?",
       {
@@ -81,8 +81,25 @@ var orm = {
         cb(queryResult);
       }
     );
+  },*/
+
+ 
+  createChildProfile: function(childArray, cb) {
+    var stmt = "INSERT INTO childdetail (parentId, childName ) VALUES ?";
+    dbConnection.query(stmt, [childArray] ,
+      function(err, queryResult) {
+        if (err) {
+          //throw err;
+          console.log("orm createChildProfile ERROR " + err);
+          cb(err);
+        }
+        console.log("orm createChildProfile success " + queryResult);
+        cb(queryResult);
+      }
+    );
   },
-  createElves: function(chidId, elvesName, cb) {
+
+  /*createElves: function(chidId, elvesName, cb) {
     dbConnection.query(
       "INSERT INTO elves SET ?",
       {
@@ -100,7 +117,24 @@ var orm = {
         cb(queryResult);
       }
     );
+  },*/
+
+  createElves: function(elevesArray, cb) {
+    dbConnection.query(
+      "INSERT INTO elves (childId, elvesName) VALUES ?",
+      [elevesArray] ,
+      function(err, queryResult) {
+        if (err) {
+          console.log("orm createElve error =" + err);
+          //throw err;
+          cb(err);
+        }
+        console.log("orm createElve error =" + queryResult);
+        cb(queryResult);
+      }
+    );
   },
+
   getUserChildren: function ( userId, cb) {
     var child = "select * from childdetail WHERE parentId = '" + userId + "'";
     dbConnection.query(

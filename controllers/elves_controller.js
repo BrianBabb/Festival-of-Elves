@@ -79,14 +79,25 @@ router1.post("/familyProfile", function(req, res) {
   //todo
   /*javascript to get all check values from the check box
   and push into array. later, use the array to loop and call orm.creatElves. we will pass array[index] value which will be elves name to pass as parm to createElves method*/
+
   orm.getUserId(emailId, function(result) {
     userId = result[0].id;
+    var childArry = [];
+    childArry.push([userId, child1]);
+    childArry.push([userId, child2]);
     orm.createParentProfile(userId, firstName, lastName, function(result) {
-      orm.createChildProfile(userId, child1, function(result) {});
-      orm.createChildProfile(userId, child2, function(result) {
+      // orm.createChildProfile(userId, child1, function(result) {});
+      //orm.createChildProfile(userId, child2, function(result) {
+      //single orm call vs 2 calls
+      orm.createChildProfile(childArry, function(result) {
         orm.getUserChildren(userId, function(result) {
-          orm.createElves(result[0].childId, elf1, function(result) {});
-          orm.createElves(result[1].childId, elf2, function(result) {
+          var elvesArray = [];
+          elvesArray.push([result[0].childId, elf1]);
+          elvesArray.push([result[1].childId, elf2]);
+          // orm.createElves(result[0].childId, elf1, function(result) {});
+          //orm.createElves(result[1].childId, elf2, function(result) {
+          //single orm call vs 2 calls
+          orm.createElves(elvesArray, function(result) {
             res.render("login", { loginFailed: false });
             //res.redirect("/elvCal");
             // res.re("/elvCal");
