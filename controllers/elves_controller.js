@@ -9,7 +9,7 @@ var child1 = "";
 var child2 = "";
 var elf1 = "";
 var elf2 = "";
-var isParent = false;
+
 router1.post("/registerUser", function(req, res) {
   emailId = req.body.userEmail;
   var userPwd = req.body.password;
@@ -148,6 +148,9 @@ router1.get("/calendar", function(req, res) {
   });
 });
 router1.get("/logout", function(req, res) {
+  res.render("home");
+});
+router1.get("/home", function(req, res) {
   res.render("home");
 });
 
