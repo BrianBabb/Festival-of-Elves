@@ -9,15 +9,20 @@
 
           <!-- Makes POST request to /register route -->
           <form action="/registerUser" method="POST">
+            
+            <% if ( dupError) { %>
+              <h4>Email already exists</h4>
+              <%}%>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" class="form-control" name="userEmail">
+              <input type="email" class="form-control" name="userEmail" required>
             </div>
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" class="form-control" name="password">
+              <input type="password" class="form-control" name="password" required>
             </div>
-            <button type="submit" class="btn btn-dark">Register</button>
+            <button type="submit"  class="btn btn-dark">Register</button>
+            
           </form>
         </div>
       </div>
