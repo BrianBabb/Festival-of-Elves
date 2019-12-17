@@ -99,20 +99,33 @@
   .weeks span {
       padding: 10px;
   }
+  .weeks span:hover {
+    padding: 10px;
+    cursor: pointer;
+}
   
   .weeks span.active {
       background: #f78536;
       border-radius: 50%;
   }
   
-  .weeks span:not(.last-month):hover {
-      cursor: pointer;
-      font-weight: 600;
-  }
-  
+   
   .event {
       position: relative;
   }
+  #hide{
+      visibility: hidden;
+  }
+  .secret-text {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #000;
+  }
+  .jumbotron{
+    background-color: transparent;
+  }
+  
   
   /* .event:after {
       content: '•';
@@ -195,9 +208,12 @@
     background: #b10a04fd;
     height: 50px;
     width: 200px;
-    font-size: 30px;
+    font-weight: 300;
+    font-size: 1.4em;
     padding-left: 30px;
     color: azure;
+    margin: 15px;
+    padding: 30px ;
 
 
   }
@@ -209,7 +225,7 @@
   
   .actions button:hover {
       
-      /* background: #497285; */
+       background: green; 
       cursor: pointer;
   }
   
@@ -218,7 +234,12 @@
       background:green;
       outline: none;
   }
-  
+
+ a:hover {
+    /* background: #5889a0; */
+    background:green;
+    outline: none;
+}
   /* Flip animation */
   
   .flip {
