@@ -3,13 +3,19 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Festival of the Elves</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Norican|Pacifico|Sunshiney&display=swap" rel="stylesheet">
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <link rel="stylesheet" href="/css/style2.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -22,14 +28,12 @@
 <body>
     <canvas id="canvas"></canvas>
 
-    <div class="card mb-3">
 
-        <div class="card-body">
-            <h5 class="card-title">Festival of the Elves</h5>
-            <p class="card-text"></p>
-            <p class="card-text"><small class="text-muted"></small></p>
-        </div>
-    </div>
+            <h1 class="ml6">
+                <span class="text-wrapper">
+                  <span class="letters">Festival of the Elves!</span>
+                </span>
+              </h1>
     <!-- Modal -->
 
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -38,6 +42,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
+                    
                     <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <!-- <span aria-hidden="true">&times;</span> -->
@@ -75,26 +80,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="sergo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Happy Birthday Sergo!!!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <!-- <span aria-hidden="true">&times;</span> -->
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="../public/css/image/sergosanta.JPG" alt="sergosanta" class="img-thumbnail">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                </div>
-            </div>
-        </div>
-    </div> */
 
 
 
@@ -114,7 +100,7 @@
                         </div>
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="0" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button  data-day="0" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -423,7 +409,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="13"type="button" class="btn btn-danger" data-toggle="modal" data-target="#sergo">
+                                <button data-day="13"type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
                                 <div class="rule-shape">&#10054;14&#10054;</div>

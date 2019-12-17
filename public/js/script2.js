@@ -1,116 +1,121 @@
-(function() {
-  var requestAnimationFrame =
-    window.requestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.msRequestAnimationFrame ||
-    function(callback) {
-      window.setTimeout(callback, 1000 / 60);
-    };
-  window.requestAnimationFrame = requestAnimationFrame;
-})();
+'use strict'
 
-var flakes = [],
-  canvas = document.getElementById("canvas"),
-  ctx = canvas.getContext("2d"),
-  flakeCount = 400,
-  mX = -100,
-  mY = -100;
+const canvas = document.querySelector('canvas')
+const ctx = canvas.getContext('2d')
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-function snow() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  for (var i = 0; i < flakeCount; i++) {
-    var flake = flakes[i],
-      x = mX,
-      y = mY,
-      minDist = 150,
-      x2 = flake.x,
-      y2 = flake.y;
-
-    var dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y)),
-      dx = x2 - x,
-      dy = y2 - y;
-
-    if (dist < minDist) {
-      var force = minDist / (dist * dist),
-        xcomp = (x - x2) / dist,
-        ycomp = (y - y2) / dist,
-        deltaV = force / 2;
-
-      flake.velX -= deltaV * xcomp;
-      flake.velY -= deltaV * ycomp;
-    } else {
-      flake.velX *= 0.98;
-      if (flake.velY <= flake.speed) {
-        flake.velY = flake.speed;
-      }
-      flake.velX += Math.cos((flake.step += 0.05)) * flake.stepSize;
-    }
-
-    ctx.fillStyle = "rgba(255,255,255," + flake.opacity + ")";
-    flake.y += flake.velY;
-    flake.x += flake.velX;
-
-    if (flake.y >= canvas.height || flake.y <= 0) {
-      reset(flake);
-    }
-
-    if (flake.x >= canvas.width || flake.x <= 0) {
-      reset(flake);
-    }
-
-    ctx.beginPath();
-    ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
-    ctx.fill();
-  }
-  requestAnimationFrame(snow);
-}
-
-function reset(flake) {
-  flake.x = Math.floor(Math.random() * canvas.width);
-  flake.y = 0;
-  flake.size = Math.random() * 3 + 2;
-  flake.speed = Math.random() * 1 + 0.5;
-  flake.velY = flake.speed;
-  flake.velX = 0;
-  flake.opacity = Math.random() * 0.5 + 0.3;
-}
+let width, height, lastNow
+let snowflakes
+const maxSnowflakes = 300
 
 function init() {
-  for (var i = 0; i < flakeCount; i++) {
-    var x = Math.floor(Math.random() * canvas.width),
-      y = Math.floor(Math.random() * canvas.height),
-      size = Math.random() * 3 + 2,
-      speed = Math.random() * 1 + 0.5,
-      opacity = Math.random() * 0.5 + 0.3;
-
-    flakes.push({
-      speed: speed,
-      velY: speed,
-      velX: 0,
-      x: x,
-      y: y,
-      size: size,
-      stepSize: Math.random() / 30,
-      step: 0,
-      opacity: opacity
-    });
-  }
-
-  snow();
+  snowflakes = []
+  resize()
+  render(lastNow = performance.now())
 }
 
-canvas.addEventListener("mousemove", function(e) {
-  (mX = e.clientX), (mY = e.clientY);
-});
+function render(now) {
+  requestAnimationFrame(render)
+  
+  const elapsed = now - lastNow
+  lastNow = now
+  
+  ctx.clearRect(0, 0, width, height)
+  if (snowflakes.length < maxSnowflakes)
+    snowflakes.push(new Snowflake())
+  
+  ctx.fillStyle = ctx.strokeStyle = '#fff'
 
-window.addEventListener("resize", function() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
+  snowflakes.forEach(snowflake => snowflake.update(elapsed, now))
+}
 
+function pause() {
+  cancelAnimationFrame(render)
+}
+function resume() {
+  lastNow = performance.now()
+  requestAnimationFrame(render)
+}
+
+
+class Snowflake {
+  constructor() {
+    this.spawn()
+  }
+  
+  spawn(anyY = false) {
+    this.x = rand(0, width)
+    this.y = anyY === true
+      ? rand(-50, height + 50)
+      : rand(-50, -10)
+    this.xVel = rand(-.05, .05)
+    this.yVel = rand(.02, .1)
+    this.angle = rand(0, Math.PI * 2)
+    this.angleVel = rand(-.001, .001)
+    this.size = rand(7, 12)
+    this.sizeOsc = rand(.01, .5)
+  }
+  
+  update(elapsed, now) {
+    const xForce = rand(-.001, .001);
+
+    if (Math.abs(this.xVel + xForce) < .075) {
+      this.xVel += xForce
+    }
+    
+    this.x += this.xVel * elapsed
+    this.y += this.yVel * elapsed
+    this.angle += this.xVel * 0.05 * elapsed //this.angleVel * elapsed
+    
+    if (
+      this.y - this.size > height ||
+      this.x + this.size < 0 ||
+      this.x - this.size > width
+    ) {
+      this.spawn()
+    }
+    
+    this.render()
+  }
+  
+  render() {
+    ctx.save()
+    const { x, y, angle, size } = this
+    ctx.beginPath()
+    ctx.arc(x, y, size * 0.3, 0, Math.PI * 2, false)
+    ctx.fill()
+    ctx.restore()
+  }
+}
+
+// Utils
+const rand = (min, max) => min + Math.random() * (max - min)
+
+function resize() {
+  width = canvas.width = window.innerWidth
+  height = canvas.height = window.innerHeight
+}
+
+window.addEventListener('resize', resize)
+window.addEventListener('blur', pause)
+window.addEventListener('focus', resume)
 init();
+
+
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 750,
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml6',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
