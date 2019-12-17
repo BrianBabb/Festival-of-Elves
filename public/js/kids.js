@@ -23,7 +23,7 @@ var weeklyMessages = [
   { day: 22, message: "Today is thursday" },
   { day: 23, message: "Today is thursday" },
   { day: 24, message: "Today is thursday" },
-  { day: 25, message: "It is Christmas!!!!!! Hooray, Hooray!Enjoy this special day with your family. Please remember to keep Christmas in your heart by being good and kind all year round. We’ll visit you again next year. We will miss you very, very much."}
+  { day: 25, message: "It is Christmas!!!!!!" }
 ];
 
 $(".btn").on("click", function(e) {
