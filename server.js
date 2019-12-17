@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const session = require('express-session');
 const passport = require("passport");
-
+var PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
 //app.set("view engine", "handlebars");
 //app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 
-app.listen(3000, function() {
+app.listen(PORT, function() {
   console.log("Server started on port 3000.");
 });
 
