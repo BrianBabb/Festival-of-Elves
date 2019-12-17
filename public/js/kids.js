@@ -26,7 +26,7 @@ var weeklyMessages = [
   { day: 25, message: "It is Christmas!!!!!! Hooray, Hooray!Enjoy this special day with your family. Please remember to keep Christmas in your heart by being good and kind all year round. We’ll visit you again next year. We will miss you very, very much."}
 ];
 
-$(".btn-danger").on("click", function(e) {
+$(".btn").on("click", function(e) {
   console.log("clicked a day", this);
   var day = parseInt($(this).data("day"));
 
