@@ -119,3 +119,24 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
+// santa text
+anime.timeline({loop: true})
+.add({
+  targets: '.ml15 .word',
+  scale: [14,1],
+  opacity: [0,1],
+  easing: "easeOutCirc",
+  duration: 800,
+  delay: (el, i) => 800 * i
+}).add({
+  targets: '.ml15',
+  opacity: 0,
+  duration: 1000,
+  easing: "easeOutExpo",
+  delay: 1000
+});
+
+// sounds
+var santaSnd = new Audio("../css/sound/santasound.mp3");
+var kidsPageSnd = new Audio("../css/sound/kidspagesound.mp3");
+var buttonsClick = new Audio("../css/sound/123.mp3");

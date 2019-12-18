@@ -305,40 +305,36 @@
   .modal-body {
     position: relative;
     padding: 15px;
-    background-color: #e44f47;
     font-size: 26px;
-    color: #fff;
-    text-shadow: 2px 2px #0f0f0f;
-    font-family: 'Pacifico', cursive;
-    background: linear-gradient(#e66465, #9198e5);
+    color: #333;
+    text-shadow: 2px 2px #dbd4d4;
+    font-family: 'Lakki Reddy', cursive;
+    background: url("/../css/image/retina_wood.png");
 }
-
-.modal-header {
-    padding: 15px;
-    border-bottom: 1px solid #e5e5e5;
-    background-image:url(../css/image/headerbg.jpeg) ;
+/* santa header */
+.ml15 {
+    font-weight: 800;
+    font-size: 3.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #FF5847;
+    font-family: 'Sacramento', cursive;
+    text-shadow: 3px 3px #0f0f0f;
+    text-align: center;
+  }
+  
+  .ml15 .word {
+    display: inline-block;
+    line-height: 1em;
+  }
+.kindTextColor{
+    color: #a23227;
+    font-family: 'Sacramento', cursive;
+    font-size: 50px;
 }
-
-
-@media screen and (max-width:1200px){
-    *, *:after, *:before {
-        box-sizing: border-box;
-      }
-      
-      .tags {
-          flex-wrap: wrap;
-          -webkit-box-pack: center;
-          justify-content: center;
-          display: -webkit-box;
-          display: flex;
-      }
-    .tag-container {
-        width: 60px;
-        height: 130px;
-        margin: 50px;
-        position: relative;
-        -webkit-perspective: 800px;
-        perspective: 800px;
-    }
-
+.elfTextColor{
+    color: #a23227;
+    font-family: 'Sacramento', cursive;
+    font-size: 40px;
+    text-align: end;
 }
