@@ -9,13 +9,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap" rel="stylesheet">
-    
-    <link href="https://fonts.googleapis.com/css?family=Norican|Pacifico|Sunshiney&display=swap" rel="stylesheet">
-
-    
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- header fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <!-- calendar fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Norican|Pacifico|Sunshiney&display=swap" rel="stylesheet">
+    <!-- santa fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Eagle+Lake|Lakki+Reddy|Sacramento&display=swap" rel="stylesheet">
+
+    
 
     <link rel="stylesheet" href="/css/style2.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -25,16 +29,28 @@
 
 </head>
 
-<body>
-    <canvas id="canvas"></canvas>
+<body onLoad="kidsPageSnd.play()">
 
+
+
+    <canvas id="canvas"></canvas>
+<!-- sergo modal -->
     <div class="modal fade" id="sergo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle"></h5>
+              <h5 class="modal-title" id="exampleModalCenterTitle">
+                  
+                
+                <h1 class="ml15">
+                    <span class="word">Merry</span>
+                    <span class="word">Christmas</span>
+                  </h1>
+            
+            
+            </h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                
               </button>
             </div>
             <div class="modal-body">
@@ -46,7 +62,6 @@
           </div>
         </div>
       </div>
-
             <h1 class="ml6">
                 <span class="text-wrapper">
                   <span class="letters">Festival of the Elves!</span>
@@ -70,7 +85,7 @@
                     <div class="info">
                         <div class="address">
                           <div>
-                            <p>Dear <%= firstchild %>
+                            <p class="kindTextColor">Dear <%= firstchild %>
                               and <%= secondchild %>,</p>
                           </div>
                           <div>
@@ -78,8 +93,8 @@
                           </div>
                           <div>
                             <p>Love, </p>
-                              <p><%= firstelf %>
-                              and <%= secondelf %>.</p>
+                              <p class="elfTextColor"><%= firstelf %>
+                              and <%= secondelf %>.</p class="elfTextColor">
                           </div>
               
                           <!-- <p id="demo"></p> -->
@@ -118,7 +133,7 @@
                         </div>
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button  data-day="0" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="0" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -142,7 +157,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="1" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="1" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -165,7 +180,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="2" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="2" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -188,7 +203,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="3" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="3" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -211,7 +226,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="4" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="4" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -234,7 +249,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="5" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="5" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -257,7 +272,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="6" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="6" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -289,7 +304,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="7" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="7" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -312,7 +327,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="8" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="8" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -335,7 +350,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="9" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="9" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -358,7 +373,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button  data-day="10" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="10" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -381,7 +396,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="11" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="11" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -404,7 +419,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="12" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="12" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -427,7 +442,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="13"type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                                <button onclick="buttonsClick.play()" data-day="13"type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
                                 <div class="rule-shape">&#10054;14&#10054;</div>
@@ -456,7 +471,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="14"type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="14"type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -479,7 +494,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="15"type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="15"type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -502,7 +517,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="16"type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="16"type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -525,7 +540,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="17" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="17" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -548,7 +563,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="18" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="18" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -571,7 +586,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="19" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="19" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -594,7 +609,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="20" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="20" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -624,7 +639,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="21" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="21" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -647,7 +662,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="22" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="22" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -670,7 +685,7 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="23" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="buttonsClick.play()" data-day="23" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     Click Me
                                 </button>
@@ -693,14 +708,13 @@
 
                         <div class="tag-side tag-3-side is-back">
                             <div class="tag-text tag-3-text">
-                                <button data-day="24" type="button" class="btn btn-danger" data-toggle="modal"
+                                <button onclick="santaSnd.play()" data-day="24" type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#sergo">
                                     Click Me
                                 </button>
                                 <div class="rule-shape">&#10054;25&#10054;</div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
