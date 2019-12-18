@@ -311,6 +311,10 @@
     font-family: 'Lakki Reddy', cursive;
     background: url("/../css/image/retina_wood.png");
 }
+.modal-sergo{
+    background: url("/../css/image/sergosanta.JPG");
+    height: 560px;
+}
 /* santa header */
 .ml15 {
     font-weight: 800;
