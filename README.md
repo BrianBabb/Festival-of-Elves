@@ -39,12 +39,17 @@ Post creating a profile parent are assigned two elves that provide them 25 days 
 ## Functionality
 
 
+## Upcomming Changes
+* Ability to choose between 25 days or 7 days worth of activities. 
+* Add more kids.
+* Choose different set of activities.
+
 
 ## Contributors
 
-Angeli Elliot
-Sergo Mikirtumov
-Ahmed Shallan
-Brian Babb
-Sugeeta Gupta
+* *Angeli Elliot
+* *Sergo Mikirtumov
+* *Ahmed Shallan
+* *Brian Babb
+* *Sugeeta Gupta
     
