@@ -5,6 +5,7 @@
  ## Table of contents
 * [What is Festival of the Elves App?](#what-is-FOTEA)
 * [Technologies](#technologies)
+* [Functionality](#technologies)
 * [Upcomming Changes](#upcomming-changes)
 * [Contributors](#contributors)
 
@@ -25,6 +26,21 @@ Post creating a profile parent are assigned two elves that provide them 25 days 
 
 ----
 
+### Deployed App on Heroku
+
+  [~~ Click here to see the running app ~~]( https://festivalofelves.herokuapp.com/)
+
+
+### Instructions for local setup/## Functionality
+
+1. Git clone the source code.
+
+2. Install dependencies by using `npm install` in the terminal.
+
+3. Run the application using `node server.js` in the terminal.
+
+4. Launch the app in your browser `localhost:PORT` as shown in the terminal.
+
 ## Technologies
 
 * NodeJs
@@ -36,7 +52,6 @@ Post creating a profile parent are assigned two elves that provide them 25 days 
 * MVC paradigm
 * Heroku
 
-## Functionality
 
 
 ## Upcomming Changes
