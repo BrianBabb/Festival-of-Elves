@@ -4,8 +4,8 @@
 
  ## Table of contents
 * [What is Festival of the Elves App?](#what-is-FOTEA)
-* [Technologies](#technologies)
-* [Functionality](#technologies)
+* [Technologies Used](#technologies)
+* [Instructions for local set-up](#instructions)
 * [Upcomming Changes](#upcomming-changes)
 * [Contributors](#contributors)
 
@@ -31,7 +31,7 @@ Post creating a profile parent are assigned two elves that provide them 25 days 
   [~~ Click here to see the running app ~~]( https://festivalofelves.herokuapp.com/)
 
 
-### Instructions for local setup/## Functionality
+### Instructions for local setup
 
 1. Git clone the source code.
 
