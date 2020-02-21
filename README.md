@@ -21,10 +21,6 @@ Post creating a profile parent are assigned two elves that provide them 25 days 
 
 ----
 
-## Link to screenshots
-![image](https://github.com/Sugeeta32/Bootstrap-Portfolio/blob/master/images/Screenshot%20(64).png)
-
-----
 
 ### Deployed App on Heroku
 
