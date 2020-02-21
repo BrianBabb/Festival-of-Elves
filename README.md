@@ -58,9 +58,9 @@ Post creating a profile parent are assigned two elves that provide them 25 days 
 
 ## Contributors
 
-* Angeli Elliot*
-* Sergo Mikirtumov*
-* Ahmed Shallan*
-* Brian Babb*
-* Sugeeta Gupta*
+* Angeli Elliot
+* Sergo Mikirtumov
+* Ahmed Shallan
+* Brian Babb
+* Sugeeta Gupta
     
