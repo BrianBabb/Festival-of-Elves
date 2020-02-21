@@ -28,7 +28,7 @@ Post creating a profile parent are assigned two elves that provide them 25 days 
 
 ### Deployed App on Heroku
 
-  [~~ Click here to see the running app ~~]( https://festivalofelves.herokuapp.com/)
+  [https://festivalofelves.herokuapp.com/]( https://festivalofelves.herokuapp.com/)
 
 
 ### Instructions for local setup
@@ -62,9 +62,9 @@ Post creating a profile parent are assigned two elves that provide them 25 days 
 
 ## Contributors
 
-* *Angeli Elliot*
-* *Sergo Mikirtumov*
-* *Ahmed Shallan*
-* *Brian Babb*
-* *Sugeeta Gupta*
+* Angeli Elliot*
+* Sergo Mikirtumov*
+* Ahmed Shallan*
+* Brian Babb*
+* Sugeeta Gupta*
     
